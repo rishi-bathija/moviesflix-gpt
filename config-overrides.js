@@ -4,6 +4,8 @@ module.exports = function override(config) {
     const fallback = config.resolve.fallback || {};
 
     Object.assign(fallback, {
+        process: require.resolve("process/browser"),
+        buffer: require.resolve("buffer/"),
         zlib: require.resolve("browserify-zlib"),
         querystring: require.resolve("querystring-es3"),
         path: require.resolve("path-browserify"),
