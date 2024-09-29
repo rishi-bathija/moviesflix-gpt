@@ -17,7 +17,7 @@ const UserMovies = () => {
                     const idToken = await user.getIdToken();
                     console.log('User ID Token:', idToken); // Log the ID token
 
-                    const response = await fetch('http://localhost:4000/api/user/watchlist', {
+                    const response = await fetch('https://moviesflix-gpt-backend.vercel.app/api/user/watchlist', {
                         method: 'GET',
                         headers: {
                             'Content-Type': 'application/json',
